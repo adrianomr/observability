@@ -71,7 +71,13 @@ This project will monitor a stock portfolio ms with grafana. The ms is a Java/Sp
 
 #### Latency
 
-There were no latency changes after adding grafana and prometeus integration.
+There were no latency changes after adding grafana and prometeus integration. This was measured with vegeta, a go library to performance tests. The results are below:
+
+* Before grafana:
+![image](before-grafana.png)
+
+* After grafana:
+![image](after-grafana.png)
 
 #### Key Metrics
 

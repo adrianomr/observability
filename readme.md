@@ -64,3 +64,18 @@ Regulation about user data is increasing in the last few years. And every compan
 Observability delivers information about the application. Business and technical information. It helps Product teams to make better decisions about product development.
 
 ## Pratical Projects
+
+### Grafana
+
+This project will monitor a stock portfolio ms with grafana. The ms is a Java/Springboot ms. The key objectives are to monitor if grafana integration will increse latency, and also to determine the valuable metrics that grafana provides. The project repo in github is this: https://github.com/adrianomr/stocks-portfolio
+
+#### Latency
+
+There were no latency changes after adding grafana and prometeus integration.
+
+#### Key Metrics
+
+##### Micrometer JVM
+
+Micrometer has a default dashboard that utilizes prometeus data to monitor requests rate, request errors, request duration, JVM Heap, JVM Non-Heap, JVM total memory, cpu usage, threads, log events and some other metrics.
+

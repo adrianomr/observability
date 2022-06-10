@@ -85,3 +85,27 @@ There were no latency changes after adding grafana and prometeus integration. Th
 
 Micrometer has a default dashboard that utilizes prometeus data to monitor requests rate, request errors, request duration, JVM Heap, JVM Non-Heap, JVM total memory, cpu usage, threads, log events and some other metrics.
 
+### New Relic
+
+This project will monitor a stock portfolio ms with New Relic. The ms is a Java/Springboot ms. The key objectives are to monitor if new relic integration will increse latency, and also to determine the valuable metrics that new relic provides. The project repo in github is this: https://github.com/adrianomr/stocks-portfolio
+
+#### Micrometer Library
+
+Micrometer is a library for collecting metrics from JVM-based applications and services and is included in Spring Boot 2 and backported to Spring Boot 1.3+. It is used by new relic to show application metrics
+
+#### Key Metrics
+
+New Relic has a dashboard with default metrics as memory use, request rate and etc. It also allows to analise database requests, web requests, JVM data, and other application metrics.
+
+#### Latency
+
+There were no latency changes after adding new relicintegration. This was measured with vegeta, a go library to performance tests. The results are below:
+
+* Before new relic:
+![image](before-grafana.png)
+
+* After new relic:
+![image](after-newrelic.png)
+
+https://newrelic.com/blog/how-to-relic/how-to-monitor-spring-boot-applications-using-micrometer-metrics
+
